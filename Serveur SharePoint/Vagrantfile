@@ -1,0 +1,7 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "leiven/cve-2023-29357-sharepoint"
+  config.vm.box_version = "1"
+
+  # Configuration de la deuxième interface réseau
+  config.vm.network "private_network", ip: "192.168.56.4", netmask: "255.255.255.0"
+end
